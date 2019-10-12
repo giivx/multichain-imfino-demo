@@ -33,7 +33,14 @@
 
 		<div class="container">
 			<header>
-					<h1><a href="./">Imfino Blockchain Demo</a><?php if (strlen($name)) { ?> &ndash; <?php echo html($name)?><?php } ?></h1>
+				<div class="row">
+					<div>
+						<img src="https://imfino.com/static/images/imfino_logo.png" class="logo img-responsive">
+					</div>
+					<div>
+						<h1><a href="./">Imfino Blockchain Demo</a><?php if (strlen($name)) { ?> &ndash; <?php echo html($name)?><?php } ?></h1>
+					</div>
+				</div>
 			<?php
 			if (strlen($chain)) {
 				$name=@$config[$chain]['name'];
@@ -96,7 +103,7 @@
 
 	} else {
 
-		echo '<p class="lead"><a href="./?chain='.html($chain).'&page=blockchain-admin">Blockchain Administrator</a></p>'
+		echo '<p class="lead"><a href="./?chain=default&page=blockchain-admin">Blockchain Administrator</a></p>'
 ?>
 			<p class="lead"><br/>Available nodes:</p>
 
