@@ -82,6 +82,7 @@
 			case 'streamfilter':
 			case 'approve':
 			case 'asset-file':
+			case 'blockchain-admin':
 				require_once 'page-'.$_GET['page'].'.php';
 				break;
 
