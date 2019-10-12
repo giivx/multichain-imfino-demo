@@ -121,17 +121,16 @@
 <?php
 	}
 ?>
-
-		</div>
-		<footer>
-			<div class="footer-copyright">
-				<div class="container">
-						<img src="https://imfino.com/static/images/imfino_logo_white.png" class="footer-logo img-responsive">
-						<div class="copyright text-right">
-								© Imfino 2019
-						</div>
+			<footer>
+				<div class="footer-copyright">
+					<div class="container">
+							<img src="https://imfino.com/static/images/imfino_logo_white.png" class="footer-logo img-responsive">
+							<div class="copyright text-right">
+									© Imfino 2019
+							</div>
+					</div>
 				</div>
-			</div>
-		</footer>
+			</footer>
+		</div>
 	</body>
 </html>
