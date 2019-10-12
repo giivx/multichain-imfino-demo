@@ -34,10 +34,10 @@
 		<div class="container">
 			<header>
 				<div class="row">
-					<div>
+					<div class="col-md-4">
 						<img src="https://imfino.com/static/images/imfino_logo.png" class="logo img-responsive">
 					</div>
-					<div>
+					<div class=".col-md-4 .col-md-offset-4">
 						<h1><a href="./">Imfino Blockchain Demo</a><?php if (strlen($name)) { ?> &ndash; <?php echo html($name)?><?php } ?></h1>
 					</div>
 				</div>
