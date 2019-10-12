@@ -38,7 +38,9 @@
 						<img src="https://imfino.com/static/images/imfino_logo.png" class="logo img-responsive">
 					</div>
 					<div class=".col-md-4 .col-md-offset-4">
-						<h1><a href="./">Imfino Blockchain Demo</a><?php if (strlen($name)) { ?> &ndash; <?php echo html($name)?><?php } ?></h1>
+						<h1 class="text-right"><a href="./">Imfino Blockchain Demo</a>
+							<!-- <?php if (strlen($name)) { ?> &ndash; <?php echo html($name)?><?php } ?> -->
+						</h1>
 					</div>
 				</div>
 			<?php
@@ -103,8 +105,10 @@
 
 	} else {
 
-		echo '<p class="lead"><a href="./?chain=default&page=blockchain-admin">Blockchain Administrator</a></p>'
 ?>
+
+			<p class="lead mt35"><a href="./?chain=default&page=blockchain-admin">Blockchain Administrator</a></p>
+
 			<p class="lead"><br/>Available nodes:</p>
 
 			<p>
@@ -117,16 +121,17 @@
 <?php
 	}
 ?>
-			<footer>
-				<div class="footer-copyright">
-					<div class="container">
-							<img src="https://imfino.com/static/images/imfino_logo_white.png" class="footer-logo img-responsive">
-							<div class="copyright text-right">
-									© Imfino 2019
-							</div>
-					</div>
-				</div>
-			</footer>
+
 		</div>
+		<footer>
+			<div class="footer-copyright">
+				<div class="container">
+						<img src="https://imfino.com/static/images/imfino_logo_white.png" class="footer-logo img-responsive">
+						<div class="copyright text-right">
+								© Imfino 2019
+						</div>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
