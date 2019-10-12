@@ -1,25 +1,25 @@
 <?php
-	
+
 	require_once 'functions.php';
-	
+
 	$config=read_config();
 	$chain=@$_GET['chain'];
-	
+
 	if (strlen($chain))
 		$name=@$config[$chain]['name'];
 	else
 		$name='';
 
 	set_multichain_chain($config[$chain]);
-		
+
 ?>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<title>MultiChain Demo</title>
+
+		<title>Imfino Blockchain Demo</title>
 		<!--
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
@@ -36,7 +36,7 @@
 	if (strlen($chain)) {
 		$name=@$config[$chain]['name'];
 ?>
-			
+
 			<nav class="navbar navbar-default">
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
@@ -53,7 +53,7 @@
 
 <?php
 	if (multichain_has_smart_filters()) {
-?>						
+?>
 
 						<li><a href="./?chain=<?php echo html($chain)?>&page=txfilter" class="pair-first">Filters: Transaction</a></li>
 						<li><a href="./?chain=<?php echo html($chain)?>&page=streamfilter" class="pair-second">| Stream</a></li>
@@ -84,21 +84,23 @@
 			case 'asset-file':
 				require_once 'page-'.$_GET['page'].'.php';
 				break;
-				
+
 			default:
 				require_once 'page-default.php';
 				break;
 		}
-		
+
 	} else {
 ?>
 			<p class="lead"><br/>Choose an available node to get started:</p>
-		
+
 			<p>
 <?php
 		foreach ($config as $chain => $rpc)
 			if (isset($rpc['rpchost']))
 				echo '<p class="lead"><a href="./?chain='.html($chain).'">'.html($rpc['name']).'</a><br/>';
+
+		echo '<p><a href="./?chain='.html($chain).'&page=blockchain-admin">Blockchain Administrator</a></p>'
 ?>
 			</p>
 <?php
