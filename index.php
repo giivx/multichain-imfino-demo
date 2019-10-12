@@ -43,6 +43,7 @@
 						</h1>
 					</div>
 				</div>
+			</header>
 			<?php
 			if (strlen($chain)) {
 				$name=@$config[$chain]['name'];
@@ -76,8 +77,6 @@
 							</ul>
 						</div>
 					</nav>
-			</header>
-
 <?php
 		switch (@$_GET['page']) {
 			case 'label':
