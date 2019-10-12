@@ -15,3 +15,6 @@ code {background:none; padding:0;}
 .navbar-nav.navbar-right:last-child {margin-right: -15px !important;}
 .navbar-right {float: right!important;}
 header {border-top: 5px solid #0DAE8E;}
+.footer-copyright {background-color: #3C3C3B;  padding: 20px 0 20px 0;}
+.footer-copyright img.footer-logo {max-width: 120px; vertical-align: bottom; display: inline-block;}
+footer, footer a:link, footer a:visited {color: #fff;}

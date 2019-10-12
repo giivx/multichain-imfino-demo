@@ -30,43 +30,44 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	</head>
 	<body>
+		<header>
+				<h1><a href="./">Imfino Blockchain Demo</a><?php if (strlen($name)) { ?> &ndash; <?php echo html($name)?><?php } ?></h1>
+		<?php
+		if (strlen($chain)) {
+			$name=@$config[$chain]['name'];
+		?>
+
+				<nav class="navbar navbar-default">
+					<div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li><a href="./?chain=<?php echo html($chain)?>">Node</a></li>
+							<li><a href="./?chain=<?php echo html($chain)?>&page=permissions">Permissions</a></li>
+							<li><a href="./?chain=<?php echo html($chain)?>&page=issue" class="pair-first">Issue Asset</a></li>
+							<li><a href="./?chain=<?php echo html($chain)?>&page=update" class="pair-second">| Update</a></li>
+							<li><a href="./?chain=<?php echo html($chain)?>&page=send">Send</a></li>
+							<li><a href="./?chain=<?php echo html($chain)?>&page=offer" class="pair-first">Create Offer</a></li>
+							<li><a href="./?chain=<?php echo html($chain)?>&page=accept" class="pair-second">| Accept</a></li>
+							<li><a href="./?chain=<?php echo html($chain)?>&page=create">Create Stream</a></li>
+							<li><a href="./?chain=<?php echo html($chain)?>&page=publish">Publish</a></li>
+							<li><a href="./?chain=<?php echo html($chain)?>&page=view">View Streams</a></li>
+
+		<?php
+		if (multichain_has_smart_filters()) {
+		?>
+
+							<li><a href="./?chain=<?php echo html($chain)?>&page=txfilter" class="pair-first">Filters: Transaction</a></li>
+							<li><a href="./?chain=<?php echo html($chain)?>&page=streamfilter" class="pair-second">| Stream</a></li>
+
+		<?php
+		}
+		?>
+
+						</ul>
+					</div>
+				</nav>
+		</header>
 		<div class="container">
-			<header>
-			<h1><a href="./">Imfino Blockchain Demo</a><?php if (strlen($name)) { ?> &ndash; <?php echo html($name)?><?php } ?></h1>
-<?php
-	if (strlen($chain)) {
-		$name=@$config[$chain]['name'];
-?>
 
-			<nav class="navbar navbar-default">
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li><a href="./?chain=<?php echo html($chain)?>">Node</a></li>
-						<li><a href="./?chain=<?php echo html($chain)?>&page=permissions">Permissions</a></li>
-						<li><a href="./?chain=<?php echo html($chain)?>&page=issue" class="pair-first">Issue Asset</a></li>
-						<li><a href="./?chain=<?php echo html($chain)?>&page=update" class="pair-second">| Update</a></li>
-						<li><a href="./?chain=<?php echo html($chain)?>&page=send">Send</a></li>
-						<li><a href="./?chain=<?php echo html($chain)?>&page=offer" class="pair-first">Create Offer</a></li>
-						<li><a href="./?chain=<?php echo html($chain)?>&page=accept" class="pair-second">| Accept</a></li>
-						<li><a href="./?chain=<?php echo html($chain)?>&page=create">Create Stream</a></li>
-						<li><a href="./?chain=<?php echo html($chain)?>&page=publish">Publish</a></li>
-						<li><a href="./?chain=<?php echo html($chain)?>&page=view">View Streams</a></li>
-
-<?php
-	if (multichain_has_smart_filters()) {
-?>
-
-						<li><a href="./?chain=<?php echo html($chain)?>&page=txfilter" class="pair-first">Filters: Transaction</a></li>
-						<li><a href="./?chain=<?php echo html($chain)?>&page=streamfilter" class="pair-second">| Stream</a></li>
-
-<?php
-	}
-?>
-
-					</ul>
-				</div>
-			</nav>
-</header>
 <?php
 		switch (@$_GET['page']) {
 			case 'label':
@@ -109,5 +110,13 @@
 	}
 ?>
 		</div>
+		<footer>
+			<div class="container">
+	        <img src="https://imfino.com/static/images/imfino_logo_white.png" class="footer-logo img-responsive">
+	        <div class="copyright text-right">
+	            © Imfino 2019
+	        </div>
+	    </div>
+		</footer>
 	</body>
 </html>
