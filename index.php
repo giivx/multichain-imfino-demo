@@ -38,7 +38,7 @@
 						<img src="https://imfino.com/static/images/imfino_logo.png" class="logo img-responsive">
 					</div>
 					<div class=".col-md-4 .col-md-offset-4">
-						<h1 class="text-right"><a href="./">Imfino Blockchain Demo</a>
+						<h1 class="text-right pr35"><a href="./">Imfino Blockchain Demo</a>
 							<!-- <?php if (strlen($name)) { ?> &ndash; <?php echo html($name)?><?php } ?> -->
 						</h1>
 					</div>
@@ -106,7 +106,7 @@
 	} else {
 
 ?>
-
+<div>
 			<p class="lead mt35"><a href="./?chain=default&page=blockchain-admin">Blockchain Administrator</a></p>
 
 			<p class="lead"><br/>Available nodes:</p>
@@ -118,6 +118,7 @@
 				echo '<p class="lead"><a href="./?chain='.html($chain).'">'.html($rpc['name']).'</a><br/>';
 ?>
 			</p>
+</div>
 <?php
 	}
 ?>
@@ -125,7 +126,7 @@
 				<div class="footer-copyright">
 					<div class="container">
 							<img src="https://imfino.com/static/images/imfino_logo_white.png" class="footer-logo img-responsive">
-							<div class="copyright text-right">
+							<div class="pr35 text-right">
 									© Imfino 2019
 							</div>
 					</div>

@@ -19,5 +19,5 @@ header .logo {max-width: 140px; margin-bottom: 10px;}
 .footer-copyright {background-color: #222222;;  padding: 20px 0 20px 0;}
 .footer-copyright img.footer-logo {max-width: 120px; vertical-align: bottom; display: inline-block;}
 footer, footer a:link, footer a:visited {color: #fff;}
-.copyright {padding-right: 35px;}
-.mt35 {margin-top: 25px;}
+.pr35 {padding-right: 35px;}
+.mt35 {margin-top: 35px;}
