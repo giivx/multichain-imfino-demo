@@ -31,7 +31,8 @@
 	</head>
 	<body>
 		<div class="container">
-			<h1><a href="./">MultiChain Demo</a><?php if (strlen($name)) { ?> &ndash; <?php echo html($name)?><?php } ?></h1>
+			<header>
+			<h1><a href="./">Imfino Blockchain Demo</a><?php if (strlen($name)) { ?> &ndash; <?php echo html($name)?><?php } ?></h1>
 <?php
 	if (strlen($chain)) {
 		$name=@$config[$chain]['name'];
@@ -65,7 +66,7 @@
 					</ul>
 				</div>
 			</nav>
-
+</header>
 <?php
 		switch (@$_GET['page']) {
 			case 'label':
@@ -101,7 +102,7 @@
 			if (isset($rpc['rpchost']))
 				echo '<p class="lead"><a href="./?chain='.html($chain).'">'.html($rpc['name']).'</a><br/>';
 
-		echo '<p><a href="./?chain='.html($chain).'&page=blockchain-admin">Blockchain Administrator</a></p>'
+		echo '<p class="lead"><a href="./?chain='.html($chain).'&page=blockchain-admin">Blockchain Administrator</a></p>'
 ?>
 			</p>
 <?php
