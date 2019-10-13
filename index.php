@@ -94,6 +94,7 @@
 			case 'approve':
 			case 'asset-file':
 			case 'blockchain-admin':
+			case 'blockchain-user':
 				require_once 'page-'.$_GET['page'].'.php';
 				break;
 
