@@ -74,6 +74,7 @@
 			?>
 								<li><a href="./?chain=<?php echo html($chain)?>&page=blockchain-admin">Blockchain Administrator</a></li>
 								<li><a href="./?chain=<?php echo html($chain)?>&page=blockchain-user">Blockchain User</a></li>
+								<li><a href="./?chain=<?php echo html($chain)?>&page=transactions">Transactions</a></li>
 							</ul>
 						</div>
 					</nav>
