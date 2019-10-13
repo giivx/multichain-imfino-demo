@@ -1,5 +1,4 @@
 <?php
-phpinfo(); 
   no_displayed_error_result($transactions, multichain('listwallettransactions', 100, 0, false, true));
 ?>
 
@@ -8,7 +7,7 @@ phpinfo();
 <?php
   //$transactions = array_reverse($transactions)
 
-  print_r($transactions);
+  print_r(array_reverse($transactions));
   //foreach ($transactions as $tx)
  ?>
 </pre>
