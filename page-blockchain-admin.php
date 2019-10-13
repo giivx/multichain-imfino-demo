@@ -5,7 +5,7 @@
 <div class="container">
 	<div class="row">
     <h1>Blockchain Administrator</h1>
-    <p>Here you can create new wallets and issue ICX coins.</p>
+    <p>Here you can create new addresses and issue ICX coins.</p>
   </div>
   <div class="row">
     <div class="col-xs-12">
@@ -89,7 +89,7 @@ foreach ($addressmine as $address => $ismine) {
 }
 }
 ?>
-      <form class="form-horizontal" method="post" action="<?php echo chain_page_url_html($chain)?>">
+      <form class="form-horizontal" method="post" action="<?php echo chain_page_url_html($chain, 'blockchain-admin')?>">
         <div class="form-group">
           <div class="col-xs-12">
             <input class="btn btn-default" name="getnewaddress" type="submit" value="Get new address">
