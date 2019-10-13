@@ -62,7 +62,8 @@
 								<li><a href="./?chain=<?php echo html($chain)?>&page=create">Create Stream</a></li>
 								<li><a href="./?chain=<?php echo html($chain)?>&page=publish">Publish</a></li>
 								<li><a href="./?chain=<?php echo html($chain)?>&page=view">View Streams</a></li>
-
+								<li><a href="./?chain=<?php echo html($chain)?>&page=blockchain-admin">Blockchain Administrator</a></li>
+								<li><a href="./?chain=<?php echo html($chain)?>&page=blockchain-user">Blockchain User</a></li>
 			<?php
 			if (multichain_has_smart_filters()) {
 			?>
