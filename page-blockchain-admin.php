@@ -9,7 +9,7 @@
   </div>
   <div class="row">
     <div class="col-xs-12">
-      <h3>Current Node Addresses</h3>
+      <h3>Wallets List - Addresses on the Blockchain</h3>
 
 <?php
 if (no_displayed_error_result($getaddresses, multichain('getaddresses', true))) {
@@ -53,7 +53,7 @@ foreach ($addressmine as $address => $ismine) {
     if ($cansetlabel)
       echo (isset($label) ? ' &ndash; ' : '').
       '<a href="'.chain_page_url_html($chain, 'label', array('address' => $address)).'">'.
-      (isset($label) ? 'change label' : 'Set label').
+      (isset($label) ? 'change wallet label' : 'Set wallet label').
       '</a>';
 
             ?></td>
@@ -92,7 +92,7 @@ foreach ($addressmine as $address => $ismine) {
       <form class="form-horizontal" method="post" action="<?php echo chain_page_url_html($chain, 'blockchain-admin')?>">
         <div class="form-group">
           <div class="col-xs-12">
-            <input class="btn btn-default" name="getnewaddress" type="submit" value="Create new address">
+            <input class="btn btn-default" name="getnewaddress" type="submit" value="Create new wallet">
           </div>
         </div>
       </form>
@@ -120,7 +120,7 @@ foreach ($addressmine as $address => $ismine) {
   			<div class="row">
 
   				<div class="col-sm-5">
-  					<h3>Available Balances</h3>
+  					<h3>Available Balance</h3>
 
   <?php
   	$sendaddresses=array();
@@ -214,7 +214,7 @@ foreach ($addressmine as $address => $ismine) {
   				</div>
 
   				<div class="col-sm-7">
-  					<h3>Send Asset</h3>
+  					<h3>Send ICX</h3>
 
   					<form class="form-horizontal" method="post" action="./?chain=<?php echo html($_GET['chain'])?>&page=<?php echo html($_GET['page'])?>">
   						<div class="form-group">
@@ -275,7 +275,7 @@ foreach ($addressmine as $address => $ismine) {
   						</div>-->
   						<div class="form-group">
   							<div class="col-sm-offset-3 col-sm-9">
-  								<input class="btn btn-default" type="submit" name="sendasset" value="Send Asset">
+  								<input class="btn btn-default" type="submit" name="sendasset" value="Send ICX">
   							</div>
   						</div>
   					</form>
