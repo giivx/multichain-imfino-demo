@@ -108,6 +108,7 @@
 ?>
 <div>
 			<p class="lead mt35"><a href="./?chain=default&page=blockchain-admin">Blockchain Administrator</a></p>
+			<p class="lead mt35"><a href="./?chain=default&page=blockchain-user">Blockchain User</a></p>
 
 			<p class="lead"><br/>Available nodes:</p>
 
