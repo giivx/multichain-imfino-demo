@@ -117,7 +117,7 @@ foreach ($addressmine as $address => $ismine) {
   	}
   ?>
 
-  			<div class="row">
+  			<div id="icxsend" class="row">
 
   				<div class="col-sm-5">
   					<h3>Available Balance</h3>
@@ -216,7 +216,7 @@ foreach ($addressmine as $address => $ismine) {
   				<div class="col-sm-7">
   					<h3>Send ICX</h3>
 
-  					<form class="form-horizontal" method="post" action="./?chain=<?php echo html($_GET['chain'])?>&page=<?php echo html($_GET['page'])?>">
+  					<form class="form-horizontal" method="post" action="./?chain=<?php echo html($_GET['chain'])?>&page=<?php echo html($_GET['page'])?>#icxsend">
   						<div class="form-group">
   							<label for="from" class="col-sm-3 control-label">From address:</label>
   							<div class="col-sm-9">
