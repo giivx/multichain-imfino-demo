@@ -95,6 +95,7 @@
 			case 'asset-file':
 			case 'blockchain-admin':
 			case 'blockchain-user':
+			case 'transactions':
 				require_once 'page-'.$_GET['page'].'.php';
 				break;
 
@@ -109,6 +110,7 @@
 <div>
 			<p class="lead mt35"><a href="./?chain=default&page=blockchain-admin">Blockchain Administrator</a></p>
 			<p class="lead mt35"><a href="./?chain=default&page=blockchain-user">Blockchain User</a></p>
+			<p class="lead mt35"><a href="./?chain=default&page=transactions">Transactions</a></p>
 
 			<p class="lead"><br/>Available nodes:</p>
 
