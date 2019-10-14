@@ -19,11 +19,11 @@
   </thead>
   <?php foreach ($transactions as $tx): ?>
     <tr>
-      <td class="overflow-auto"><?php echo $tx['txid']; ?></td>
-      <td class="overflow-auto"><?php echo $tx['blockhash']; ?></td>
-      <td class="overflow-auto"><?php echo $tx['myaddresses'][0]; ?></td>
-      <td class="overflow-auto"><?php echo $tx['myaddresses'][1]; ?></td>
-      <td class="overflow-auto"><?php echo $tx['vout'][0]['assets'][0]['qty']; ?></td>
+      <td><?php echo $tx['txid']; ?></td>
+      <td><?php echo $tx['blockhash']; ?></td>
+      <td><?php echo $tx['myaddresses'][0]; ?></td>
+      <td><?php echo $tx['myaddresses'][1]; ?></td>
+      <td><?php echo $tx['vout'][0]['assets'][0]['qty']; ?></td>
     </tr>
   <?php endforeach; ?>
 </table>
