@@ -1,5 +1,5 @@
 a, a:link, a, a:visited, a:focus {color: #0DAE8E;}
-td {overflow: hidden;}
+td {overflow: scroll;}
 .nav > li > a.pair-first {padding-right:5px;}
 .nav > li > a.pair-second {padding-left:0;}
 .bg-success {background-color: #ccffbb; border:1px solid #cccccc;}
